@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Правда о Дубинкиной | МБОУ Лицей №4</title>
+    <style>
+        :root {
+            --blood-red: #8b0000;
+            --toxic-green: #00ff33;
+            --dark-bg: #0a0a0c;
+            --panel-bg: #141419;
+            --text-color: #d1d1d6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            font-family: 'Courier New', Courier, monospace;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle, rgba(16, 29, 16, 0.2) 0%, rgba(10, 10, 12, 1) 80%);
+        }
+
+        /* Хоррор-эффект помех */
+        @keyframes flicker {
+            0% { opacity: 0.9; }
+            50% { opacity: 0.4; }
+            100% { opacity: 0.9; }
+        }
+
+        @keyframes scanline {
+            0% { transform: translateY(-100%); }
+            100% { transform: translateY(100%); }
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 2px solid var(--blood-red);
+            background: rgba(0, 0, 0, 0.8);
+            position: relative;
+        }
+
+        header::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+            z-index: 2;
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        h1 {
+            color: var(--blood-red);
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            text-shadow: 0 0 10px rgba(139, 0, 0, 0.8);
+            animation: flicker 0.15s infinite;
+        }
+
+        .subtitle {
+            color: var(--toxic-green);
+            font-size: 1.2rem;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .alert-box {
+            background-color: rgba(139, 0, 0, 0.1);
+            border: 1px dashed var(--blood-red);
+            padding: 20px;
+            margin-bottom: 40px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .alert-box h2 {
+            color: var(--blood-red);
+            margin-bottom: 10px;
+        }
+
+        .section-title {
+            color: var(--toxic-green);
+            border-bottom: 1px solid var(--toxic-green);
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-size: 1.6rem;
+        }
+
+        .grid-clones {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--panel-bg);
+            border: 1px solid #222;
+            border-left: 4px solid var(--blood-red);
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px rgba(0, 255, 51, 0.2);
+            border-left-color: var(--toxic-green);
+        }
+
+        .card h3 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 2px 6px;
+            background: #2a0000;
+            color: #ff3333;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border: 1px solid #5a0000;
+        }
+
+        .timeline-item {
+            background: var(--panel-bg);
+            border: 1px solid #222;
+            padding: 20px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .time-stamp {
+            color: var(--toxic-green);
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .bunker-section {
+            background: linear-gradient(180deg, var(--panel-bg) 0%, #000 100%);
+            border: 2px solid var(--blood-red);
+            padding: 30px;
+            margin-top: 40px;
+            position: relative;
+            box-shadow: inset 0 0 30px rgba(139, 0, 0, 0.5);
+        }
+
+        .bunker-section h3 {
+            color: var(--blood-red);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            margin-top: 60px;
+            font-size: 0.8rem;
+            color: #555;
+            border-top: 1px solid #222;
+        }
+
+        p {
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ДОСЬЕ: ДУБИНКИНА</h1>
+        <div class="subtitle">Аномалия в МБОУ Лицей №4</div>
+    </header>
+
+    <main>
+        <section class="alert-box">
+            <h2>ВНИМАНИЕ ВСЕМ УЧЕНИКАМ</h2>
+            <p>на самом деле химичка не та, кто за себя выдает...</p>
+        </section>
+
+        <section>
+            <div class="section-title">Схема подмены (Каждый урок)</div>
+            <div class="timeline-item">
+                <div class="time-stamp">00:00 — 00:20</div>
+                <p>Урок начинается. Заполняет журнал, проверяет домашнее задание, клоны иногда могут проявлять себя</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-stamp">00:20 — 00:25 [КРИТИЧЕСКАЯ ФАЗА]</div>
+                <p>страшный момент: <strong>выходит из кабинета...</strong>именно тут она спомощью 6"О" заменяет клона, помогает существо UTBJI3487 сокр. "Ванёк"</p>
+            </div>
+            <div class="timeline-item">
+                <div class="time-stamp">00:25 — 00:45</div>
+                <p>выпускается незаметное вещество, которое стирает память ученикам</p>
+            </div>
+        </section>
+
+        <section>
+            <div class="section-title">все виды клонов:</div>
+            <div class="grid-clones">
+                <div class="card">
+                    <h3>Закрол Закролывна</h3>
+                    <div class="status">минимальная опасность</div>
+                    <p>почти безобидный клон, часто путает слова, говорит рот свой закрол</p>
+                </div>
+                <div class="card">
+                    <h3>Рыч Рыкич</h3>
+                    <div class="status">средняя опасность</div>
+                    <p>Издает страшные звуки при проверке контрольных работ, средняя опасность</p>
+                </div>
+                <div class="card">
+                    <h3>Пал Лаич</h3>
+                    <div class="status">Скрытая угроза</div>
+                    <p>один из самых опасных клонов, делает движуху, сбежал в кремль</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bunker-section">
+            <h3>ОБЪЕКТ «БУНКЕР-2012»</h3>
+            <p>Оригинальная Дубинкина не вела уроки с конца <strong>2012 года</strong>. По подтвержденным данным независимого расследования 9А, она заблокирована в подземном дренажном бункере под кабинетом химии МБОУ Лицей №4.</p>
+            <p>Именно оттуда через вентиляционные шахты поступают питательные растворы для поддержания жизнедеятельности её искусственных копий. Система жизнеобеспечения работает без сбоев уже более 14 лет.</p>
+        </section>
+    </main>
+
+    <footer>
+        МБОУ Лицей №4 — ХИМИЧЕСКИЙ ЗАГОВОР © 2026. Данный ресурс заблокирован на школьных компьютерах.
+    </footer>
+
+</body>
+</html>

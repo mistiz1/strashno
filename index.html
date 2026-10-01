@@ -27,7 +27,7 @@
             background-image: radial-gradient(circle, rgba(16, 29, 16, 0.2) 0%, rgba(10, 10, 12, 1) 80%);
         }
 
-        /* Хоррор-эффект помех */
+        
         @keyframes flicker {
             0% { opacity: 0.9; }
             50% { opacity: 0.4; }
@@ -135,11 +135,34 @@
             display: inline-block;
             padding: 2px 6px;
             background: #2a0000;
-            color: #ff3333;
+            color: #ff0000;
             font-size: 0.8rem;
             text-transform: uppercase;
             margin-bottom: 15px;
             border: 1px solid #5a0000;
+        }
+        .vanek {
+
+        }
+        .burmalda {
+            display: inline-block;
+            padding: 2px 6px;
+            background: #00ff1176;
+            color: #33ff47;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border: 1px solid #0ac300;
+        }
+        .medium {
+            display: inline-block;
+            padding: 2px 6px;
+            background: #b9a60069;
+            color: #eeff33;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            border: 1px solid #c0c300;
         }
 
         .timeline-item {
@@ -184,7 +207,37 @@
         p {
             line-height: 1.6;
             margin-bottom: 10px;
-        }
+        } .scary-btn {
+    background: #000;
+    color: #ff3333;
+    border: 2px solid #ff3333;
+    padding: 10px 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: crosshair;
+    margin: 10px;
+    border-radius: 4px;
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000;
+    box-shadow: inset 0 0 10px #ff0000, 0 0 10px #ff0000;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .scary-btn:hover {
+    color: #fff;
+    background: #ff3333;
+    box-shadow: 0 0 20px #ff0000, 0 0 30px #ff0000;
+    animation: shake 0.15s infinite;
+  }
+
+
+
+<style>
+ 
+</style>
+
+
     </style>
 </head>
 <body>
@@ -197,7 +250,7 @@
     <main>
         <section class="alert-box">
             <h2>ВНИМАНИЕ ВСЕМ УЧЕНИКАМ</h2>
-            <p>на самом деле химичка не та, кто за себя выдает...</p>
+            <p>новая аномалия начинает пугать школу</p>
         </section>
 
         <section>
@@ -208,11 +261,11 @@
             </div>
             <div class="timeline-item">
                 <div class="time-stamp">00:20 — 00:25 [КРИТИЧЕСКАЯ ФАЗА]</div>
-                <p>страшный момент: <strong>выходит из кабинета...</strong>именно тут она спомощью 6"О" заменяет клона, помогает существо UTBJI3487 сокр. "Ванёк"</p>
+                <p>страшный момент: выходит из кабинета... именно тут она спомощью 6"О" заменяет клона, помогает существо UTBJI3487 сокр. "Ванёк"</p>
             </div>
             <div class="timeline-item">
                 <div class="time-stamp">00:25 — 00:45</div>
-                <p>выпускается незаметное вещество, которое стирает память ученикам</p>
+                <p>клон начинает ставить всем двойки</p>
             </div>
         </section>
 
@@ -221,32 +274,30 @@
             <div class="grid-clones">
                 <div class="card">
                     <h3>Закрол Закролывна</h3>
-                    <div class="status">минимальная опасность</div>
+                    <div class="burmalda">минимальная опасность</div>
                     <p>почти безобидный клон, часто путает слова, говорит рот свой закрол</p>
                 </div>
                 <div class="card">
-                    <h3>Рыч Рыкич</h3>
-                    <div class="status">средняя опасность</div>
+                    <h3>Рыч Рычий</h3>
+                    <div class="medium">средняя опасность</div>
                     <p>Издает страшные звуки при проверке контрольных работ, средняя опасность</p>
                 </div>
                 <div class="card">
                     <h3>Пал Лаич</h3>
-                    <div class="status">Скрытая угроза</div>
-                    <p>один из самых опасных клонов, делает движуху, сбежал в кремль</p>
+                    <div class="status">критическая опасность</div>
+                    <p>один из самых опасных клонов, делает движуху и путается в словах, сбежал в кремль</p>
                 </div>
             </div>
         </section>
 
         <section class="bunker-section">
             <h3>ОБЪЕКТ «БУНКЕР-2012»</h3>
-            <p>Оригинальная Дубинкина не вела уроки с конца <strong>2012 года</strong>. По подтвержденным данным независимого расследования 9А, она заблокирована в подземном дренажном бункере под кабинетом химии МБОУ Лицей №4.</p>
-            <p>Именно оттуда через вентиляционные шахты поступают питательные растворы для поддержания жизнедеятельности её искусственных копий. Система жизнеобеспечения работает без сбоев уже более 14 лет.</p>
+            <p>Оригинальная Дубинкина не вела уроки с конца <strong>2012 года</strong>. По подтвержденным данным независимого расследования всех классов, она заблокирована в подземном дренажном бункере под кабинетом химии МБОУ Лицей №4</p>
+            <p>Именно оттуда через вентиляционные шахты поступают питательные растворы для поддержания жизнедеятельности её искусственных копий, Система жизнеобеспечения работает без сбоев уже более 14 лет</p>
         </section>
     </main>
-
-    <footer>
-        МБОУ Лицей №4 — ХИМИЧЕСКИЙ ЗАГОВОР © 2026. Данный ресурс заблокирован на школьных компьютерах.
-    </footer>
-
+<button class="scary-btn" onclick="alert('прости, оно сейчас в разработке :D')">вся правда о физике</button> 
+<button class="scary-btn" onclick="alert('недостаточно информации!')">вся правда о ваньке из 6&quot;O&quot;</button>
+<div class="vanek">остерегайтесь ванька из 6"О"...</div>
 </body>
 </html>
